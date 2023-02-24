@@ -9,10 +9,5 @@
         <module name="serenity" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="plataformaEfectigo" target="17" />
-      <module name="plataformaEfectigo.main" target="17" />
-      <module name="plataformaEfectigo.test" target="17" />
-    </bytecodeTargetLevel>
   </component>
 </project>

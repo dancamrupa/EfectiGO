@@ -1,0 +1,299 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">plataformaEfectigo</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="7981b280b4ad96082b880b3eb5f93567141147ebdfa6fccf53f5fac6c3d2f7bd.html">Cancelacion De Credito En La Plataforma De Gestion Efectigo</a></span>
+                > <span class="truncate-60"><a
+                    href="660cb6e0ba8b93a3bc267500bb347b1b5a76a536fe4790d8f51b21d54d765bbe.html">Cancelar credito </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 24-02-2023 15:49</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Cancelacion De Credito En La Plataforma De Gestion Efectigo </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                como usuario de plataforma de gestion Efectigo<br />
+Quiero cancelar un credito solicitado
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="4b58064b221d17283e174187a55da98c0f254e593e794ab7ad0cadb829121c16.html">Cancelar Credito
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Cancelar credito
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given el usuario quiere ingresar a la plataforma de gestion efectigo<br>When el usuario ingresa el &lt;usuario&gt; y &lt;password&gt; en la plataforma de gestion efectigo<br>And el usuario selecciona la opcion de solicitar credito y selecciona la &lt;cantidad&gt; y el &lt;plazo&gt;<br>And el usuario cancela el credito solicitado<br>Then podra ver el mensaje de la solicitud cancelada</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="d99475c8d3b7d5f5d588d2a58e47bf4468470f5677ac05efe25aad855c76220a.png" title=" 1: Cancelar credito ({usuario=&quot;marcozamudio@multiplica.com&quot;, password=&quot;Abcd1234.&quot;, cantidad=&quot;18000&quot;, plazo=&quot;9 meses&quot;})" width="1920"/>
+                <img src="d99475c8d3b7d5f5d588d2a58e47bf4468470f5677ac05efe25aad855c76220a.png" title=" Given el usuario quiere ingresar a la plataforma de gestion efectigo" width="1920"/>
+                <img src="d99475c8d3b7d5f5d588d2a58e47bf4468470f5677ac05efe25aad855c76220a.png" title=" Userstandar open platform" width="1920"/>
+                <img src="d99475c8d3b7d5f5d588d2a58e47bf4468470f5677ac05efe25aad855c76220a.png" title=" UserStandar opens the Login user interface" width="1920"/>
+                <img src="d99475c8d3b7d5f5d588d2a58e47bf4468470f5677ac05efe25aad855c76220a.png" title=" Userstandar open platform (completed)" width="1920"/>
+                <img src="d99475c8d3b7d5f5d588d2a58e47bf4468470f5677ac05efe25aad855c76220a.png" title=" Given el usuario quiere ingresar a la plataforma de gestion efectigo (completed)" width="1920"/>
+                <img src="1b622c5f6eac99f0cb96e21479dec7489fb310b8ac0dde4ff68693cccaf82adc.png" title=" When el usuario ingresa el &quot;marcozamudio@multiplica.com&quot; y &quot;Abcd1234.&quot; en la plataforma de gestion efectigo" width="1920"/>
+                <img src="1b622c5f6eac99f0cb96e21479dec7489fb310b8ac0dde4ff68693cccaf82adc.png" title=" Userstandar login" width="1920"/>
+                <img src="1b622c5f6eac99f0cb96e21479dec7489fb310b8ac0dde4ff68693cccaf82adc.png" title=" UserStandar clicks on Ya soy un usuario" width="1920"/>
+                <img src="09bb51a749e6f8793580fab1c46806e99add638de4b464f85ffe94049cc34172.png" title=" UserStandar enters 'marcozamudio@multiplica.com' into email o nombre de usuario" width="1920"/>
+                <img src="1a692a1fe77bc99c9cd259fb6eff4767b8a055cb880f29800bf2233b5b80e938.png" title=" UserStandar enters 'Abcd1234.' into password" width="1920"/>
+                <img src="38b1ed3b936b23d7cdcfdb33243ce89a4a9cce0814b7ec0ecda439caaa78e598.png" title=" UserStandar clicks on password" width="1920"/>
+                <img src="38b1ed3b936b23d7cdcfdb33243ce89a4a9cce0814b7ec0ecda439caaa78e598.png" title=" Userstandar login (completed)" width="1920"/>
+                <img src="38b1ed3b936b23d7cdcfdb33243ce89a4a9cce0814b7ec0ecda439caaa78e598.png" title=" When el usuario ingresa el &quot;marcozamudio@multiplica.com&quot; y &quot;Abcd1234.&quot; en la plataforma de gestion efectigo (completed)" width="1920"/>
+                <img src="3ad023c17280c8b50edb92ec62d258a3a09f8339dd508aae95b0ffa44bec0e83.png" title=" And el usuario selecciona la opcion de solicitar credito y selecciona la &quot;18000&quot; y el &quot;9 meses&quot;" width="1920"/>
+                <img src="3ad023c17280c8b50edb92ec62d258a3a09f8339dd508aae95b0ffa44bec0e83.png" title=" Userstandar solicitar credito" width="1920"/>
+                <img src="3ad023c17280c8b50edb92ec62d258a3a09f8339dd508aae95b0ffa44bec0e83.png" title=" UserStandar clicks on request credit button" width="1920"/>
+                <img src="41387077f0a3fb0b1f3ab7dd21719b79bebfe519d81daf09b17867592b547ef8.png" title=" UserStandar clicks on request button" width="1920"/>
+                <img src="3a18d8e49829dd990d95aa25b67105b8e3a1f58bc8baa39519dbca120a5efd01.png" title=" UserStandar should see succesful message with text value that is equal to: &lt;&quot;Tu solicitud se envi&oacute; con &eacute;xito&quot;&gt;" width="1920"/>
+                <img src="49ca4b7bf676ade27e86cf664e9643a25ccbb1bb3fb6f1a9d68ee657cd621617.png" title=" UserStandar clicks on check activity button" width="1920"/>
+                <img src="49ca4b7bf676ade27e86cf664e9643a25ccbb1bb3fb6f1a9d68ee657cd621617.png" title=" Userstandar solicitar credito (completed)" width="1920"/>
+                <img src="49ca4b7bf676ade27e86cf664e9643a25ccbb1bb3fb6f1a9d68ee657cd621617.png" title=" And el usuario selecciona la opcion de solicitar credito y selecciona la &quot;18000&quot; y el &quot;9 meses&quot; (completed)" width="1920"/>
+                <img src="a6029df29708dca97149758da42b5014df69565991fe2bb74941406750b792e8.png" title=" And el usuario cancela el credito solicitado" width="1920"/>
+                <img src="a6029df29708dca97149758da42b5014df69565991fe2bb74941406750b792e8.png" title=" Userstandar cancelar credito" width="1920"/>
+                <img src="a6029df29708dca97149758da42b5014df69565991fe2bb74941406750b792e8.png" title=" UserStandar clicks on request cancel button" width="1920"/>
+                <img src="3ba8e550b1e385ba8a51b4895d0dca32c7e8a4f5e2935ee1998e9ad1bb67bb83.png" title=" UserStandar clicks on confirmation button cancela" width="1920"/>
+                <img src="3ba8e550b1e385ba8a51b4895d0dca32c7e8a4f5e2935ee1998e9ad1bb67bb83.png" title=" Userstandar cancelar credito (completed)" width="1920"/>
+                <img src="3ba8e550b1e385ba8a51b4895d0dca32c7e8a4f5e2935ee1998e9ad1bb67bb83.png" title=" And el usuario cancela el credito solicitado (completed)" width="1920"/>
+                <img src="37e554d96b437dbe646216ee26a58c3f603156a8ee938b430ba5d7bf395084b3.png" title=" Then podra ver el mensaje de la solicitud cancelada" width="1920"/>
+                <img src="37e554d96b437dbe646216ee26a58c3f603156a8ee938b430ba5d7bf395084b3.png" title=" Then service cancellation message should be 'Solicitud cancelada'" width="1920"/>
+                <img src="37e554d96b437dbe646216ee26a58c3f603156a8ee938b430ba5d7bf395084b3.png" title=" Then podra ver el mensaje de la solicitud cancelada (completed)" width="1920"/>
+                <img src="37e554d96b437dbe646216ee26a58c3f603156a8ee938b430ba5d7bf395084b3.png" title=" 1: Cancelar credito ({usuario=&quot;marcozamudio@multiplica.com&quot;, password=&quot;Abcd1234.&quot;, cantidad=&quot;18000&quot;, plazo=&quot;9 meses&quot;}) (completed)" width="1920"/>
+                <img src="d99475c8d3b7d5f5d588d2a58e47bf4468470f5677ac05efe25aad855c76220a.png" title=" 2: Cancelar credito ({usuario=&quot;marcozamudio@multiplica.com&quot;, password=&quot;Abcd1234.&quot;, cantidad=&quot;26000&quot;, plazo=&quot;30 meses&quot;})" width="1920"/>
+                <img src="d99475c8d3b7d5f5d588d2a58e47bf4468470f5677ac05efe25aad855c76220a.png" title=" Given el usuario quiere ingresar a la plataforma de gestion efectigo" width="1920"/>
+                <img src="d99475c8d3b7d5f5d588d2a58e47bf4468470f5677ac05efe25aad855c76220a.png" title=" Userstandar open platform" width="1920"/>
+                <img src="d99475c8d3b7d5f5d588d2a58e47bf4468470f5677ac05efe25aad855c76220a.png" title=" UserStandar opens the Login user interface" width="1920"/>
+                <img src="d99475c8d3b7d5f5d588d2a58e47bf4468470f5677ac05efe25aad855c76220a.png" title=" Userstandar open platform (completed)" width="1920"/>
+                <img src="d99475c8d3b7d5f5d588d2a58e47bf4468470f5677ac05efe25aad855c76220a.png" title=" Given el usuario quiere ingresar a la plataforma de gestion efectigo (completed)" width="1920"/>
+                <img src="80b74a8570d6c81a1d9209750059edbda0cc052b3bcbb0f9a9a8491700a713c3.png" title=" When el usuario ingresa el &quot;marcozamudio@multiplica.com&quot; y &quot;Abcd1234.&quot; en la plataforma de gestion efectigo" width="1920"/>
+                <img src="80b74a8570d6c81a1d9209750059edbda0cc052b3bcbb0f9a9a8491700a713c3.png" title=" Userstandar login" width="1920"/>
+                <img src="80b74a8570d6c81a1d9209750059edbda0cc052b3bcbb0f9a9a8491700a713c3.png" title=" UserStandar clicks on Ya soy un usuario" width="1920"/>
+                <img src="ba021f9f93855f88173789ea18966a0ceea646d6320452aec044c8d352c843c2.png" title=" UserStandar enters 'marcozamudio@multiplica.com' into email o nombre de usuario" width="1920"/>
+                <img src="22e012b616da9b7ccd50db5e61ea14d3834167adfd08e0f8f1598d083ea6cb3e.png" title=" UserStandar enters 'Abcd1234.' into password" width="1920"/>
+                <img src="a99e3167646c4e68d66f8a97f680eb09370a5fb454b2d5b1a75c615586c529f0.png" title=" UserStandar clicks on password" width="1920"/>
+                <img src="a99e3167646c4e68d66f8a97f680eb09370a5fb454b2d5b1a75c615586c529f0.png" title=" Userstandar login (completed)" width="1920"/>
+                <img src="a99e3167646c4e68d66f8a97f680eb09370a5fb454b2d5b1a75c615586c529f0.png" title=" When el usuario ingresa el &quot;marcozamudio@multiplica.com&quot; y &quot;Abcd1234.&quot; en la plataforma de gestion efectigo (completed)" width="1920"/>
+                <img src="2dbfef9d8b6c603c671cdbe567fc5a5755339d52a12c69740c532191918d599a.png" title=" And el usuario selecciona la opcion de solicitar credito y selecciona la &quot;26000&quot; y el &quot;30 meses&quot;" width="1920"/>
+                <img src="2dbfef9d8b6c603c671cdbe567fc5a5755339d52a12c69740c532191918d599a.png" title=" Userstandar solicitar credito" width="1920"/>
+                <img src="2dbfef9d8b6c603c671cdbe567fc5a5755339d52a12c69740c532191918d599a.png" title=" UserStandar clicks on request credit button" width="1920"/>
+                <img src="7b0ccb6d7523204af42afd5fe1e632408151b91cab7fc75b924175fa1ba8cc8b.png" title=" UserStandar clicks on request button" width="1920"/>
+                <img src="587c5992f02f978d922ab396a66a99618ca14081387d5843c6433587fc672a13.png" title=" UserStandar should see succesful message with text value that is equal to: &lt;&quot;Tu solicitud se envi&oacute; con &eacute;xito&quot;&gt;" width="1920"/>
+                <img src="86087d4a87ccab69ade63391a02db056ea152218222ef93fc3864da0015ea6fa.png" title=" UserStandar clicks on check activity button" width="1920"/>
+                <img src="86087d4a87ccab69ade63391a02db056ea152218222ef93fc3864da0015ea6fa.png" title=" Userstandar solicitar credito (completed)" width="1920"/>
+                <img src="86087d4a87ccab69ade63391a02db056ea152218222ef93fc3864da0015ea6fa.png" title=" And el usuario selecciona la opcion de solicitar credito y selecciona la &quot;26000&quot; y el &quot;30 meses&quot; (completed)" width="1920"/>
+                <img src="d589c0b044ef354fc79226b18632d55cf5dcc8a30c269029bb77667ed90fd191.png" title=" And el usuario cancela el credito solicitado" width="1920"/>
+                <img src="d589c0b044ef354fc79226b18632d55cf5dcc8a30c269029bb77667ed90fd191.png" title=" Userstandar cancelar credito" width="1920"/>
+                <img src="d589c0b044ef354fc79226b18632d55cf5dcc8a30c269029bb77667ed90fd191.png" title=" UserStandar clicks on request cancel button" width="1920"/>
+                <img src="c94494682d80f01b43be25693f876fe3bf72d9703f523a2fecf6f0e43d050889.png" title=" UserStandar clicks on confirmation button cancela" width="1920"/>
+                <img src="c94494682d80f01b43be25693f876fe3bf72d9703f523a2fecf6f0e43d050889.png" title=" Userstandar cancelar credito (completed)" width="1920"/>
+                <img src="c94494682d80f01b43be25693f876fe3bf72d9703f523a2fecf6f0e43d050889.png" title=" And el usuario cancela el credito solicitado (completed)" width="1920"/>
+                <img src="aa029aa057d15d6b927f81a1f7068dbbe39b0ee47932546fb156d8418a42e893.png" title=" Then podra ver el mensaje de la solicitud cancelada" width="1920"/>
+                <img src="aa029aa057d15d6b927f81a1f7068dbbe39b0ee47932546fb156d8418a42e893.png" title=" Then service cancellation message should be 'Solicitud cancelada'" width="1920"/>
+                <img src="aa029aa057d15d6b927f81a1f7068dbbe39b0ee47932546fb156d8418a42e893.png" title=" Then podra ver el mensaje de la solicitud cancelada (completed)" width="1920"/>
+                <img src="aa029aa057d15d6b927f81a1f7068dbbe39b0ee47932546fb156d8418a42e893.png" title=" 2: Cancelar credito ({usuario=&quot;marcozamudio@multiplica.com&quot;, password=&quot;Abcd1234.&quot;, cantidad=&quot;26000&quot;, plazo=&quot;30 meses&quot;}) (completed): <span class='success-color'>SUCCESS</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.4.24</span>
+</div>
+</body>
+</html>

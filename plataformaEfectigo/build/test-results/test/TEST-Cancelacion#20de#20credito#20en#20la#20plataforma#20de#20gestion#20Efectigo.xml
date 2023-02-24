@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cancelacion de credito en la plataforma de gestion Efectigo" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-02-24T20:49:49" hostname="LAPTOP-ISHB1AIA" time="55.808">
+  <properties/>
+  <testcase name="Cancelar credito #1" classname="Cancelacion de credito en la plataforma de gestion Efectigo" time="31.286"/>
+  <testcase name="Cancelar credito #2" classname="Cancelacion de credito en la plataforma de gestion Efectigo" time="24.522"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Cleaning up unclosed ZipFile for archive C:\Users\camir\IdeaProjects\EfectiGO\plataformaEfectigo\.\src\test\resources\dataDriven\dataEfectiGO.xlsx
+Cleaning up unclosed ZipFile for archive C:\Users\camir\IdeaProjects\EfectiGO\plataformaEfectigo\.\src\test\resources\dataDriven\dataEfectiGO.xlsx
+Cleaning up unclosed ZipFile for archive C:\Users\camir\IdeaProjects\EfectiGO\plataformaEfectigo\.\src\test\resources\dataDriven\dataEfectiGO.xlsx
+Cleaning up unclosed ZipFile for archive C:\Users\camir\IdeaProjects\EfectiGO\plataformaEfectigo\.\src\test\resources\dataDriven\dataEfectiGO.xlsx
+Cleaning up unclosed ZipFile for archive C:\Users\camir\IdeaProjects\EfectiGO\plataformaEfectigo\.\src\test\resources\dataDriven\dataEfectiGO.xlsx
+Starting ChromeDriver 109.0.5414.74 (e7c5703604daa9cc128ccf5a5d3e993513758913-refs/branch-heads/5414@{#1172}) on port 47303
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+[1677271792.049][WARNING]: This version of ChromeDriver has not been tested with Chrome version 110.
+Feb 24, 2023 3:49:52 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Starting ChromeDriver 109.0.5414.74 (e7c5703604daa9cc128ccf5a5d3e993513758913-refs/branch-heads/5414@{#1172}) on port 42452
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+[1677271821.490][WARNING]: This version of ChromeDriver has not been tested with Chrome version 110.
+Feb 24, 2023 3:50:21 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+</testsuite>
